@@ -1,16 +1,105 @@
-# Small-Models-Sharp-Minds-Reasoning-Driven-Word-Sense-Disambiguation-with-Low-Parameter-LLMs
+# An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs
+
+An Exploration–Analysis–Disambiguation (EAD) Framework for Word Sense Disambiguation using <4B Parameter Models.
+
+Paper: An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs  
+Authors: Deshan Sumanathilaka, Nicholas Micallef, Julian Hough  
+Affiliation: Swansea University, UK  
+Conference: LREC 2026 (Accepted)
+
+---
+
+## Overview
+
+This repository contains the implementation of the Exploration–Analysis–Disambiguation (EAD) reasoning framework for Word Sense Disambiguation (WSD).
+
+We demonstrate that low-parameter LLMs (<4B parameters) can achieve competitive and state-of-the-art performance when equipped with structured reasoning strategies:
+
+- Chain-of-Thought (CoT) reasoning  
+- Neighbour-word semantic analysis  
+- Correct vs incorrect sense elimination  
+- Syntactic evidence for verb disambiguation  
+
+Our best-performing models:
+
+- Gemma 3 4B  
+- Qwen 3 4B  
+
+achieve performance comparable to larger GPT-based approaches while using significantly fewer parameters.
+
+---
+
+## Key Contributions
+
+- Introduce the EAD reasoning framework for WSD  
+- Release three reasoning-enhanced WSD datasets  
+- Demonstrate that structured reasoning is more impactful than increasing parameter size  
+- Achieve strong zero-shot generalization  
+- Reduce training data requirements (advanced reasoning uses only 10% of CoT data)
+
+---
+
+## EAD Framework
+
+The framework consists of three sequential phases:
+
+### 1. Exploration
+Collect candidate senses for the ambiguous word.
+
+### 2. Analysis
+Perform structured reasoning using:
+- Semantically relevant neighbouring words
+- Contextual evidence
+- Justification of the correct sense
+- Elimination of incorrect senses
+
+### 3. Disambiguation
+Return the final sense ID.
+
+---
+
+## Datasets Used
+
+- FEWS – primary training and evaluation dataset  
+- SemCor – supplementary training corpus  
+- Fool Me If You Can – adversarial robustness benchmark  
+- hardEN – unsolved WSD benchmark  
+- 42D – rare and domain-specific sense benchmark  
+
+---
+
+## Training Setup
+
+We use:
+
+- Supervised Fine-Tuning (SFT)
+- LoRA adapters
+- HuggingFace `transformers` and `trl`
+- NVIDIA A100 40GB GPU
+
+### Hyperparameters
+
+```yaml
+batch_size: 4
+gradient_accumulation: 8
+learning_rate: 2e-4
+epochs: 2
+optimizer: AdamW
+scheduler: linear
+seed: 3407
+```
+# Citation
+
+@inproceedings{sumanathilaka2026ead,
+  title={An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs},
+  author={Sumanathilaka, Deshan and Micallef, Nicholas and Hough, Julian},
+  booktitle={Proceedings of the Thirteenth Language Resources and Evaluation Conference"},
+  year={2026}
+}
+
+# Acknowledgement 
 
 
- Word Sense Disambiguation (WSD) remains a key challenge in Natural Language Processing (NLP), especially
- when dealing with rare or domain-specific senses that are often misinterpreted. While modern high-parameter
- Large Language Models (LLMs) such as GPT-4-Turbo have showed state-of-the-art WSD performance, their
- computational and energy demands limit scalability. This study investigates whether low-parameter LLMs (<4B
- parameters) can achieve comperable results through fine-tuning strategies that emphasize reasoning-driven sense
- identification. Using the FEWS dataset augmented with semi-automated, rationale-rich annotations, we fine-tune
- eight small-scale open-source LLMs (e.g., LLama and Qwen). Our results show that CoT-based reasoning combined
- with neighbor-word analysis achieves performance comparable to GPT-4-Turbo in zero-shot settings. Importantly,
- Gemma-3-4B and Qwen-3-4B models consistently outperform all medium-parameter baselines and state-of-the-art
- models on FEWS, with robust generalization to unseen senses. Furthermore, evaluation on the unseen “Fool
- Me If You Can” dataset confirms strong cross-domain adaptability without task-specific fine-tuning. This work
- demonstrates that with carefully crafted reasoning-centric fine-tuning, low-parameter LLMs can deliver accurate WSD
- while substantially reducing computational and energy demands.
+Supported by:
+Supercomputing Wales (ERDF via Welsh Government)
+EPSRC Grant EP/X009343/1 (FLUIDITY)
