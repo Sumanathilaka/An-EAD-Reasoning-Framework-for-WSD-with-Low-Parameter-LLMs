@@ -88,17 +88,20 @@ optimizer: AdamW
 scheduler: linear
 seed: 3407
 ```
-# Citation
+## Citation
 
+If you use this work, please cite:
+
+```bibtex
 @inproceedings{sumanathilaka2026ead,
-  title={An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs},
-  author={Sumanathilaka, Deshan and Micallef, Nicholas and Hough, Julian},
-  booktitle={Proceedings of the Thirteenth Language Resources and Evaluation Conference"},
-  year={2026}
+  title     = {An Exploration-Analysis-Disambiguation Reasoning Framework for Word Sense Disambiguation with Low-Parameter LLMs},
+  author    = {Sumanathilaka, Deshan and Micallef, Nicholas and Hough, Julian},
+  booktitle = {Proceedings of the Thirteenth Language Resources and Evaluation Conference},
+  year      = {2026}
 }
+```
 
 # Acknowledgement 
-
 
 Supported by:
 Supercomputing Wales (ERDF via Welsh Government)
