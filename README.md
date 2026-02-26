@@ -101,7 +101,10 @@ If you use this work, please cite:
 }
 ```
 
-## Trained Models can be accessed below
+## The trained models developed in this project are publicly available on **Hugging Face**.
+
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Models-yellow?logo=huggingface&logoColor=white)](https://huggingface.co/deshanksuman)
+🔗 **Model Hub:** https://huggingface.co/deshanksuman  
 
 - Base models
   1. deshanksuman/finetuned-WSD-Llama-3.2-1b-Instruct_all
