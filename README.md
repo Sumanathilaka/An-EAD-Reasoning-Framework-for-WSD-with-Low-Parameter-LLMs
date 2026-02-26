@@ -101,6 +101,40 @@ If you use this work, please cite:
 }
 ```
 
+## Trained Models can be accessed below
+
+- Base models
+  1. deshanksuman/finetuned-WSD-Llama-3.2-1b-Instruct_all
+  2. deshanksuman/finetuned-DeepSeek-R1-Distill-Qwen-1.5B_WSD
+  3. deshanksuman/finetuned-meta-Llama-3.2-3B-Instruct-WSD
+  4. deshanksuman/finetuned-meta-Llama-3.2-1B-Instruct-WSD
+  5. deshanksuman/finetuned-gemma-3-4b-it-WSD
+  6. deshanksuman/finetuned-gemma-2-2b-it-WSD
+  7.  deshanksuman/finetuned-SmolLM3-3B-WSD
+  8.  deshanksuman/finetuned-Qwen2.5-3B-Instruct-WSD
+
+- Neighbour Analysis Finetuned
+  1. deshanksuman/finetuned-DeepSeek-R1-Distill-Qwen-1.5B_WSD-Think
+  2. deshanksuman/finetuned-meta-Llama-3.2-1B-Instruct-WSD_think
+  3. deshanksuman/finetuned-gemma-2-2b-it-WSD-reason
+  4. deshanksuman/finetuned-gemma-3-4b-it-WSD_Think
+  5. deshanksuman/finetuned-meta-Llama-3.2-3B-Instruct-WSD-Think
+  6. deshanksuman/finetuned-Qwen2.5-3B-Instruct-WSD-Think
+  7. deshanksuman/finetuned-SmolLM3-3B-WSD-Think
+  8. deshanksuman/finetuned-gemma-3-4b-it-WSD_Reasoning-2epoch
+  9. deshanksuman/finetuned-Qwen3-4B-Instruct-WSD-Think
+
+- Advanced Reasoning with Correct and incorrect Selection
+  1. deshanksuman/finetuned-gemma-3-4b-it-WSD_advanced_Reasoning
+  2. deshanksuman/finetuned-Qwen2.5-3B-Instruct-WSD-Advanced-reasoning
+  3. deshanksuman/finetunedQwen3-4B-Instruct-WSD-Advanced-reasoning
+ 
+- Verb Reasoning Models
+  1. deshanksuman/finetuned-gemma-3-4b-it-WSD_VERB_Reasoning
+  2. deshanksuman/finetunedQwen3-4B-Instruct-WSD-Verb_reasoning
+  3. deshanksuman/finetuned-gemma-3-4b-it-WSD_VERB_hybrid
+  4. deshanksuman/finetunedQwen3-4B-WSD-Verb-neighbor-reasoning
+  
 # Acknowledgement 
 
 Supported by:
